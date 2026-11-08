@@ -1,97 +1,40 @@
 # Enterprise SaaS Churn Capstone: Adoption & Value Realization
 
-**Author:** Project starter  
-**Primary notebook:** [capstone_eda_baseline.ipynb](notebooks/capstone_eda_baseline.ipynb)
+**Author:** Pasupathy Balagurunathan  
+**Assignment:** Required Capstone Assignment 20.1 — Initial Report and Exploratory Data Analysis
 
 ## Executive summary
+This project demonstrates data quality checks, exploratory data analysis, feature engineering and a baseline Logistic Regression workflow for identifying enterprise SaaS accounts at risk of churn or downgrade.
 
-This project demonstrates an end-to-end exploratory data analysis and baseline machine-learning workflow for identifying enterprise SaaS accounts at risk of churn or downgrade. It combines account profile, license utilization, engagement, product breadth, executive sponsorship, customer satisfaction, and KPI value realization.
+**Data notice:** The committed CSV is synthetic teaching data containing 50 accounts and five churn-positive labels (10%). It is not real customer telemetry. Model metrics are unstable and are not evidence of production predictive performance.
 
-**Data disclaimer:** The included `saas_telemetry.csv` is a deterministic synthetic/mock dataset of 50 generated customer accounts. It is not real customer telemetry and should not be used for real account-level decisions. It is provided so the project is immediately reproducible while approved data access is pending.
+## Business question
+Can account profile, product adoption, engagement, executive sponsorship, customer satisfaction and KPI value-realization indicators help identify accounts at risk of churn or downgrade?
 
-## Rationale
-
-For high-value SaaS contracts, failing to identify an account that later churns can result in significant recurring-revenue loss. False positives also have a cost because Customer Success teams have limited capacity, but proactive outreach to a healthy account is generally less costly than missing a genuine churn risk. This motivates recall and precision-recall metrics rather than accuracy alone.
-
-## Research question
-
-Can account profile, adoption and usage signals, and value-realization indicators predict the `churn` label (1 = churned/downgraded; 0 = renewed) early enough to support targeted Customer Success intervention?
-
-## Data sources
-
-The repository includes a synthetic dataset at `data/saas_telemetry.csv` with 50 rows and 16 columns. It covers:
-
-- Account profile: account ID, contract tenure, tier, ARR, and licensed seats.
-- Adoption and usage: license utilization, DAU/MAU ratio, active core modules, and API call volume.
-- Value realization: KPI milestones achieved, automated workflows, executive sponsor QBR attendance, and CSAT.
-- Target: churn / downgrade indicator.
-
-For a production version, replace the mock file with approved, de-identified CRM, product telemetry, renewal, and customer-success data. Document data owners, extraction windows, label definitions, and privacy controls.
+## Project contents
+- [Initial report](report/Capstone_Initial_Report_EDA.docx)
+- [EDA and baseline notebook](notebooks/capstone_eda_baseline.ipynb)
+- [Synthetic dataset](data/saas_telemetry.csv)
+- [Visualizations](images/)
+- [Python dependencies](requirements.txt)
 
 ## Methodology
+1. Inspect shape, data types, missingness, target balance and duplicate account IDs.
+2. Remove duplicate account identifiers; flag numeric outliers using the 1.5×IQR rule. Outliers are not automatically deleted because extreme enterprise values may be legitimate.
+3. Engineer ARR per seat, adoption gap and value deficit.
+4. Explore class balance, churn by tier, utilization distribution, numeric correlations and CSAT/KPI differences.
+5. Fit Logistic Regression with median/mode imputation, scaling and one-hot encoding inside a scikit-learn pipeline.
+6. Evaluate recall, precision, Average Precision (PR-AUC), ROC-AUC and confusion matrix.
 
-1. **Data quality:** inspect dimensions, data types, missingness, duplicates, and target balance.
-2. **Feature engineering:** derive `arr_per_seat`, `adoption_gap`, and `value_deficit`.
-3. **EDA:** compare churn prevalence by tier and utilization band; inspect utilization, CSAT, and KPI milestone distributions by outcome.
-4. **Baseline model:** Logistic Regression in a scikit-learn Pipeline, with numeric imputation and `StandardScaler`, plus categorical imputation and `OneHotEncoder`.
-5. **Validation:** stratified 75/25 train/test split, fixed random seed, and balanced class weights. The initial operating threshold is 0.5.
-6. **Evaluation:** recall and Average Precision (PR-AUC) are primary; precision and ROC-AUC are supplementary. Confusion matrix, precision-recall curve, and coefficients support interpretation.
+## Metric rationale
+Recall matters because missed churn cases can represent lost recurring revenue. Precision reflects Customer Success intervention workload. Average Precision summarizes the precision-recall trade-off under class imbalance. ROC-AUC is supplementary; accuracy alone is not emphasized.
 
-## Results: initial dataset profile
-
-The current sample contains **50 synthetic customer accounts**, of which **5 (10%)** are labeled churned/downgraded. Four values are intentionally missing across CSAT, monthly API calls, and executive sponsor QBR attendance so the notebook can demonstrate missing-data inspection and imputation.
-
-This is a small teaching dataset. Segment rates and model metrics from a 50-row sample are statistically unstable and should be treated as practice outputs only. Re-run the notebook to calculate current EDA summaries and baseline metrics; do not reuse performance numbers from earlier, larger synthetic data.
-
-### EDA visuals
-
-Plots are generated by executing the notebook. Add exported plot files to `images/` after the notebook run.
-
-## Baseline model
-
-Logistic Regression is used as an initial binary-classification baseline. Recall is emphasized because missed churn accounts can represent lost recurring revenue; precision reflects Customer Success intervention effort; PR-AUC is useful when churn labels are relatively uncommon. With only 50 records and 5 positive labels, the held-out test set contains very few positive examples, so recall, precision, PR-AUC, and ROC-AUC will have high variance. Use this dataset to demonstrate the workflow, not to claim predictive validity.
-
-## Recommendations and next steps
-
-1. Replace mock data with approved account-level telemetry and a clearly governed churn/downgrade label.
-2. Use an observation window that ends before the renewal outcome; prevent label leakage from post-churn signals.
-3. Move from random splitting to time-based validation to reflect real deployment.
-4. Select an operating threshold based on ARR at risk, recall targets, precision, and Customer Success team capacity.
-5. Evaluate calibration and performance across Enterprise/Mid-Market tiers, ARR bands, regions, and tenure cohorts.
-6. Add trend features such as declining DAU/MAU, utilization changes, support escalations, and renewal proximity.
-7. Run a controlled pilot with human review before integrating risk scores into account workflows.
-
-## Outline of project
-
-- [Primary notebook: cleaning, EDA, feature engineering, and baseline ML](notebooks/capstone_eda_baseline.ipynb)
-- [Synthetic telemetry dataset](data/saas_telemetry.csv)
-- [Images and plots](images/)
-
-## Repository structure
-
-```text
-enterprise-saas-churn-capstone/
-├── README.md
-├── data/
-│   └── saas_telemetry.csv
-├── notebooks/
-│   └── capstone_eda_baseline.ipynb
-├── images/
-│   ├── churn_by_adoption.png
-│   ├── adoption_value_signals.png
-│   ├── baseline_confusion_matrix.png
-│   ├── precision_recall_curve.png
-│   └── logistic_coefficients.png
-└── requirements.txt
-```
+## Limitations
+With only five churn-positive examples, a stratified 25% test split contains very few positive cases. Metrics can change materially with one prediction. Treat this as a coursework workflow demonstration, not a validated churn model. A production study requires a larger governed dataset, time-based validation, leakage controls, calibration, segment evaluation and human review.
 
 ## Run locally
-
 ```bash
 python -m pip install -r requirements.txt
-jupyter notebook notebooks/capstone_eda_baseline.ipynb
+cd notebooks
+jupyter notebook capstone_eda_baseline.ipynb
 ```
-
-## Contact and further information
-
-Update this section with the project owner's preferred contact details before external publication.
