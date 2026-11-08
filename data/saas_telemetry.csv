@@ -1,0 +1,51 @@
+account_id,industry,region,tier,contract_tenure_months,annual_recurring_revenue,seat_licenses,license_utilization_pct,dau_mau_ratio,core_modules_active,api_calls_monthly,kpi_milestones_achieved_pct,automated_workflows,executive_sponsor_qbr_attendance,csat_score,churn
+SAAS-001,Financial Services,Europe,Mid-Market,30,429900,718,0.49,0.511,5,1749.0,0.717,39,3.0,4.0,0
+SAAS-002,Healthcare,North America,Enterprise,53,1591500,1129,0.684,0.465,7,8142.0,0.545,83,2.0,4.0,0
+SAAS-003,Technology,Europe,Mid-Market,22,223300,206,0.266,0.358,2,8132.0,0.451,35,2.0,2.0,1
+SAAS-004,Retail,North America,Mid-Market,50,230300,358,0.441,0.356,4,5745.0,0.74,47,2.0,3.0,0
+SAAS-005,Retail,Europe,Enterprise,52,1626500,969,0.706,0.391,7,12435.0,1.0,80,3.0,,0
+SAAS-006,Manufacturing,North America,Mid-Market,22,133200,137,0.721,0.691,6,4316.0,0.828,59,4.0,4.0,0
+SAAS-007,Financial Services,North America,Enterprise,20,1095700,1059,1.0,0.95,6,3315.0,0.728,33,4.0,3.0,0
+SAAS-008,Manufacturing,Europe,Enterprise,68,1284000,722,0.904,0.659,8,8252.0,0.955,77,3.0,2.0,0
+SAAS-009,Technology,Europe,Enterprise,32,3805500,3201,0.632,0.626,5,2889.0,0.787,68,3.0,2.0,0
+SAAS-010,Healthcare,Europe,Enterprise,72,1531600,1430,0.342,0.294,4,10246.0,0.402,14,2.0,3.0,0
+SAAS-011,Retail,APAC,Enterprise,48,6410000,4837,0.777,0.632,7,9561.0,0.536,36,4.0,4.0,0
+SAAS-012,Telecom,North America,Mid-Market,50,152100,281,0.635,0.387,4,9898.0,0.849,51,3.0,4.0,0
+SAAS-013,Telecom,APAC,Mid-Market,13,652900,593,0.893,0.584,7,6034.0,0.671,65,4.0,4.0,0
+SAAS-014,Manufacturing,North America,Enterprise,55,2214600,1505,0.533,0.359,3,20582.0,0.08,73,1.0,3.0,1
+SAAS-015,Telecom,Europe,Mid-Market,16,236200,457,0.816,0.738,6,6096.0,0.883,44,,4.0,0
+SAAS-016,Technology,Europe,Enterprise,62,5852900,3628,0.913,0.84,10,13179.0,0.859,71,2.0,3.0,0
+SAAS-017,Manufacturing,North America,Mid-Market,55,165600,152,0.497,0.243,2,8881.0,0.401,5,2.0,3.0,0
+SAAS-018,Retail,North America,Mid-Market,48,194000,327,0.752,0.547,6,21329.0,0.833,68,2.0,2.0,0
+SAAS-019,Retail,APAC,Mid-Market,15,100100,172,0.511,0.474,4,8229.0,0.456,45,3.0,2.0,1
+SAAS-020,Technology,North America,Mid-Market,42,152400,202,0.684,0.56,5,15497.0,0.789,52,4.0,4.0,0
+SAAS-021,Technology,North America,Enterprise,17,2167800,2404,0.567,0.464,4,5401.0,0.53,45,3.0,2.0,0
+SAAS-022,Healthcare,North America,Enterprise,54,7789200,4687,0.554,0.294,1,10867.0,0.48,49,3.0,4.0,0
+SAAS-023,Financial Services,North America,Mid-Market,43,974400,879,0.36,0.416,3,6626.0,0.625,37,1.0,2.0,0
+SAAS-024,Technology,North America,Mid-Market,21,286800,395,0.77,0.738,5,9023.0,1.0,50,4.0,3.0,0
+SAAS-025,Financial Services,North America,Enterprise,7,4626900,3396,0.804,0.785,6,6000.0,1.0,42,4.0,3.0,0
+SAAS-026,Healthcare,Europe,Mid-Market,27,215300,167,0.634,0.311,2,6644.0,0.849,13,3.0,3.0,0
+SAAS-027,Healthcare,North America,Mid-Market,28,879100,739,0.988,0.81,3,5467.0,0.832,43,4.0,4.0,0
+SAAS-028,Technology,North America,Mid-Market,71,448200,763,0.477,0.268,4,5738.0,0.721,52,3.0,3.0,1
+SAAS-029,Technology,Europe,Enterprise,46,4535900,3032,0.489,0.293,2,11961.0,0.519,41,2.0,3.0,0
+SAAS-030,Manufacturing,APAC,Enterprise,68,5292400,2999,0.731,0.514,7,4614.0,0.437,43,3.0,3.0,0
+SAAS-031,Technology,North America,Enterprise,22,1519100,1130,0.625,0.609,5,4960.0,0.692,83,3.0,2.0,0
+SAAS-032,Healthcare,Europe,Mid-Market,67,623900,604,0.585,0.549,3,23604.0,0.725,58,1.0,3.0,0
+SAAS-033,Manufacturing,North America,Enterprise,69,2053100,1414,0.655,0.549,6,7282.0,0.669,45,3.0,3.0,0
+SAAS-034,Telecom,Europe,Mid-Market,70,839100,793,0.848,0.515,1,18912.0,0.452,35,3.0,3.0,0
+SAAS-035,Healthcare,Europe,Mid-Market,54,634300,826,0.549,0.779,6,7552.0,0.833,39,2.0,3.0,0
+SAAS-036,Telecom,Europe,Mid-Market,12,728600,838,0.613,0.563,7,13686.0,0.792,49,3.0,3.0,0
+SAAS-037,Manufacturing,North America,Mid-Market,20,233600,273,0.684,0.591,4,9120.0,0.726,20,3.0,3.0,0
+SAAS-038,Telecom,North America,Mid-Market,68,455400,813,0.589,0.438,4,6652.0,0.521,57,4.0,4.0,0
+SAAS-039,Telecom,North America,Mid-Market,69,260300,265,0.753,0.655,6,5927.0,0.716,49,2.0,3.0,1
+SAAS-040,Technology,Europe,Enterprise,31,5001100,2895,0.743,0.162,8,,0.699,96,3.0,4.0,0
+SAAS-041,Technology,APAC,Mid-Market,51,266000,370,0.622,0.67,7,790.0,0.487,81,3.0,5.0,0
+SAAS-042,Financial Services,Europe,Mid-Market,36,205700,213,0.702,0.531,7,3524.0,0.87,62,3.0,3.0,0
+SAAS-043,Financial Services,APAC,Enterprise,56,6285100,4574,0.736,0.507,6,8116.0,0.447,82,1.0,4.0,0
+SAAS-044,Technology,APAC,Mid-Market,47,712300,569,0.379,0.273,3,7560.0,0.626,67,1.0,3.0,0
+SAAS-045,Technology,North America,Mid-Market,31,216600,223,0.611,0.614,4,16190.0,0.685,37,2.0,,0
+SAAS-046,Financial Services,North America,Enterprise,22,2573900,1929,0.692,0.535,2,16440.0,0.782,61,3.0,4.0,0
+SAAS-047,Financial Services,Europe,Enterprise,59,6551800,4022,0.834,0.482,7,4588.0,0.743,80,4.0,5.0,0
+SAAS-048,Healthcare,North America,Mid-Market,70,824900,912,0.543,0.365,2,1967.0,0.337,55,3.0,4.0,0
+SAAS-049,Technology,North America,Mid-Market,44,891400,706,0.493,0.383,3,9930.0,0.692,28,2.0,4.0,0
+SAAS-050,Telecom,APAC,Mid-Market,17,726400,639,0.481,0.373,3,4304.0,0.692,54,3.0,2.0,0
