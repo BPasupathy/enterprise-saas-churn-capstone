@@ -1,3 +1,7 @@
+## Live Vercel deployment
+
+[Open the deployed project](https://enterprise-saas-churn-capstone.vercel.app)
+
 # Enterprise SaaS Churn Capstone: Adoption & Value Realization
 
 **Author:** Pasupathy Balagurunathan  
