@@ -1,6 +1,6 @@
 ## Live Vercel deployment
 
-[Open the deployed project](https://enterprise-saas-churn-capstone.vercel.app)
+[Open the deployed project](https://enterprise-saas-churn-capstone-bpasupathy.vercel.app)
 
 # Enterprise SaaS Churn Capstone: Adoption & Value Realization
 
