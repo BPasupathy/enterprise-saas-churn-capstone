@@ -1,4 +1,4 @@
-> **Live project page:** [Enterprise SaaS Churn Capstone on Vercel](https://enterprise-saas-churn-capstone.vercel.app)
+> **Live project page:** [Enterprise SaaS Churn Capstone on Vercel](https://enterprise-saas-churn-capstone-bpasupathy.vercel.app)
 
 # Enterprise SaaS Churn Capstone
 ## Required Capstone Assignment 20.1 — Initial Report and Exploratory Data Analysis
